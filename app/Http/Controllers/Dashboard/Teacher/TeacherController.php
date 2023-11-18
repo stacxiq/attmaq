@@ -4,10 +4,7 @@ namespace App\Http\Controllers\Dashboard\Teacher;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TeacherFormRequuest;
-<<<<<<< HEAD
 use App\Models\Banner;
-=======
->>>>>>> b71d6a1 (add notifications)
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -46,7 +43,6 @@ class TeacherController extends Controller
         Teacher::destroy($id);
         return redirect()->route('teachers.index')->with('success', 'Teacher deleted successfully.');
     }
-<<<<<<< HEAD
 
     public function bannerCreate($id){
         $teacher = Teacher::findOrFail($id);
@@ -64,8 +60,6 @@ class TeacherController extends Controller
         return redirect()->route('teachers.index')->with('success', 'Teacher banner created successfully.');
 
     }
-=======
->>>>>>> b71d6a1 (add notifications)
     public function edit($id){
         $teacher =  Teacher::findOrFail($id);
         return view('admin.teachers.edit', compact('teacher'));

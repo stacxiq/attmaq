@@ -4,10 +4,7 @@ namespace App\Http\Controllers\Dashboard\Session;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SessionGroupRequest;
-<<<<<<< HEAD
 use App\Models\Banner;
-=======
->>>>>>> b71d6a1 (add notifications)
 use App\Models\Sessiongroup;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
@@ -15,17 +12,11 @@ use Illuminate\Http\Request;
 class SessionGroupController extends Controller
 {
     //
-<<<<<<< HEAD
     public function index(Request $request){
         $query = $request->query('query');
         $sessionGroups = $query == null || $query == 'اختر ال قارئ' ?  Sessiongroup::all() : Sessiongroup::where('teacher_id', $query)->get();
         $teachers = Teacher::all();
         return view('admin.sessions.index', compact('sessionGroups', 'teachers'));
-=======
-    public function index(){
-        $sessionGroups = Sessiongroup::all();
-        return view('admin.sessions.index', compact('sessionGroups'));
->>>>>>> b71d6a1 (add notifications)
     }
 
     public function create(){
@@ -56,7 +47,6 @@ class SessionGroupController extends Controller
         $sessionGroupO->update($sessionGroup);
         return redirect()->route('admin.sessions.index');
     }
-<<<<<<< HEAD
 
     public function bannerAdd($id){
         $sessionGroup = Sessiongroup::findOrFail($id);
@@ -72,6 +62,4 @@ class SessionGroupController extends Controller
 
         return redirect()->route('admin.sessions.index');
     }
-=======
->>>>>>> b71d6a1 (add notifications)
 }

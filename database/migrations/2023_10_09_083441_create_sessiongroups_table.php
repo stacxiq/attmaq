@@ -12,13 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sessiongroups', function (Blueprint $table) {
-<<<<<<< HEAD
             $table->uuid('id')->primary();;
             $table->foreignUuid('teacher_id')->constrained('teachers')->references('id')->onDelete('cascade');
-=======
-            $table->id();
-            $table->foreignId('teacher_id')->constrained('teachers')->references('id')->onDelete('cascade');
->>>>>>> b71d6a1 (add notifications)
             $table->string('title');
             $table->string('content');
             $table->dateTime('start-date');

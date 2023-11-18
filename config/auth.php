@@ -44,13 +44,10 @@ return [
             'driver' => 'session',
             'provider' => 'teachers',
         ],
-<<<<<<< HEAD
         'student' => [
             'driver' => 'sanctum',
             'provider' => 'students',
         ],
-=======
->>>>>>> b71d6a1 (add notifications)
     ],
 
     /*
@@ -79,13 +76,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Teacher::class,
         ],
-<<<<<<< HEAD
         'students' => [
             'driver' => 'eloquent',
             'model' => App\Models\Student::class,
         ],
-=======
->>>>>>> b71d6a1 (add notifications)
 
         // 'users' => [
         //     'driver' => 'database',
@@ -125,15 +119,12 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-<<<<<<< HEAD
         'students' => [
             'provider' => 'students',
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
         ],
-=======
->>>>>>> b71d6a1 (add notifications)
     ],
 
     /*

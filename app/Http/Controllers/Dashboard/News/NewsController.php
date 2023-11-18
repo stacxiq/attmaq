@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard\News;
 
-<<<<<<< HEAD
 use App\Models\Banner;
-=======
->>>>>>> b71d6a1 (add notifications)
 use App\Models\News;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -102,7 +99,6 @@ class NewsController extends Controller
         return redirect()->route('news.index');
         //
     }
-<<<<<<< HEAD
 
     public function bannerCreate($id)
     {
@@ -116,6 +112,4 @@ class NewsController extends Controller
         smilify('success', 'تم اضافه الخبر الى لوحه الاعلانات');
         return redirect()->route('news.index');
     }
-=======
->>>>>>> b71d6a1 (add notifications)
 }

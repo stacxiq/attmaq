@@ -12,11 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('news', function (Blueprint $table) {
-<<<<<<< HEAD
             $table->uuid('id')->primary();;
-=======
-            $table->id();
->>>>>>> b71d6a1 (add notifications)
             $table->string('title');
             $table->text('content');
             $table->dateTime('date');
